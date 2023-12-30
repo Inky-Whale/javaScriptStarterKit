@@ -1,36 +1,39 @@
-console.log("Merhaba Kodlama.io")
+/* var sayi1 = 10;
+sayi1 = "Hello World!";
+console.log(sayi1); */
 
-//JS type safe değildir
-let dolarBugun = 9.30
+let student = { id: 1, name: "Berk" };
+/* console.log(student); */
 
-let dolarDun = 9.20
-dolarDun = "9.20"
-{
-    let dolarDun = 9.10
+function save(score = 10, entity) {
+  console.log(entity.name + " saved " + score);
 }
 
-console.log(dolarDun)
+//save(undefined, student);
 
-const euroDun = 11.2
-//euroDun = 11
+let students = ["Berk Karanfil", "Erkin Dara", "Rafi Er"];
+/* console.log(students); */
 
-console.log(euroDun)
+let students2 = [
+  student,
+  { id: 2, name: "Ekin" },
+  "Ankara",
+  { city: "İstanbul" },
+];
+//console.log(students2);
 
-//array
-//camelCasing
-//PascalCasing
-let konutKredileri = ["Konut kredisi","Emlak Konut Kredisi","Kamu Konut Kredisi","Özel Konut Kredisi"]
+/* REST */
+let showProducts = function (id, ...products) {
+  console.log(id);
+  console.log(products);
+};
 
-console.log("<ul>")
-for(let i = 0;i<konutKredileri.length;i++){
-    console.log("<li>"+konutKredileri[i]+"</li>")
-}
-console.log("</ul>")
+//console.log(typeof showProducts);
 
-{/* <ul>
-    <li>Konut kredisi</li>
-    <li>Emlak Konut Kredisi</li>
-    <li>Kamu Konut Kredisi</li>
-</ul> */}
+//showProducts(10, "Elma", "Armut", "Karpuz");
 
-console.log(konutKredileri)
+/* SPREAD */
+let scores = [1, 2, 3, 4, 5, 12, 6, 14, 25];
+
+console.log(Math.max(...scores));
+console.log(..."ABC", "D", ..."EFG", "H");
