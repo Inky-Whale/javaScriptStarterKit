@@ -37,3 +37,21 @@ let scores = [1, 2, 3, 4, 5, 12, 6, 14, 25];
 
 console.log(Math.max(...scores));
 console.log(..."ABC", "D", ..."EFG", "H");
+
+/* Destructuring */
+let populations = [10000, 20000, 30000, [40000, 10000]];
+let [small, medium, high, [veryHigh, maximum]] = populations;
+
+function someFunction([small1]) {
+  console.log(small1);
+}
+someFunction(populations);
+
+let category = { id: 1, name: "İçecek" };
+console.log(category.id);
+console.log(category["name"]);
+
+let { id, name } = category;
+console.log(id, name);
+
+/* Redux */
